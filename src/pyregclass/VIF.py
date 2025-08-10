@@ -3,7 +3,7 @@ import statsmodels.api as sm
 import pandas as pd
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
-def vif(mod):
+def vif(mod : sm.regression.linear_model.RegressionResultsWrapper):
     """
     Calculate VIF using statsmodels' variance_inflation_factor
     
@@ -28,9 +28,3 @@ def vif(mod):
     vif_data["VIF"] = [variance_inflation_factor(X, i) for i in range(X.shape[1])]
     
     return vif_data
-
-# Example usage
-y = np.random.randn(100)
-X = np.random.randn(100, 5)
-mod = sm.OLS(y, sm.add_constant(X)).fit()
-print(vif(mod))
