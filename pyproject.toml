@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyregclass"
+version = "0.0.1"
+dependencies = ["pandas", "statsmodels", "numpy"]
+authors = [
+  { name="Alexander Holmes", email="alex.g.h@me.com" },
+]
+description = "Python port of the RegClass package for R - a package for an introductory class on regression and classification"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/AlexanderHolmes0/pyregclass"
+Issues = "https://github.com/AlexanderHolmes0/pyregclass/issues"
